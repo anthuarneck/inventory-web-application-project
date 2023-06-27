@@ -1,0 +1,17 @@
+header {
+    background: pink;
+
+}
+
+header h1 {
+    margin: 0 0 50px;
+    padding: 25px;
+    border-bottom: 1px solid blue;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(1fr, 4);
+    grid-template-areas: 
+    "s s m m";
+}
