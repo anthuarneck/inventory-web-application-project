@@ -1,12 +1,12 @@
 header {
-    background: pink;
+    background: linear-gradient(grey, white);
 
 }
 
 header h1 {
     margin: 0 0 50px;
     padding: 25px;
-    border-bottom: 1px solid blue;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 .container {
@@ -14,4 +14,12 @@ header h1 {
     grid-template-columns: repeat(1fr, 4);
     grid-template-areas: 
     "s s m m";
+}
+
+.sidebar {
+    grid-area: s;
+}
+
+.main {
+    grid-area: m;
 }
