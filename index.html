@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <script defer src="index.js"></script>
     <meta charset="UTF-8">
@@ -8,11 +9,69 @@
     <link rel="stylesheet" href="./styles.css">
     <title>Vintage Game Inventory🕹️</title>
 </head>
+
 <body>
     <header>
         <h1>Vintage Game Inventory🕹️</h1>
     </header>
-    <div class="container">Container</div>
-    <form></form>
+    <div class="container">
+        <h2>Inventory🕹️</h2>
+        <ul>
+            <li><img src="https://upload.wikimedia.org/wikipedia/en/4/42/Supersmashbox.jpg" />
+                <br>
+                Super Smash Bros. 64
+                <br>
+                <strong>In Stock: </strong>
+                Yes
+                <br>
+                <strong>Price: </strong>
+                $70
+                <br>
+                <strong>New/Used: </strong>
+                Used
+                <br>
+                <strong>Rarity: </strong>
+                Medium
+                <br>
+            </li>
+        </ul>
+    </div>
+    <form id="new-game">
+        <label for="name">Game<span class="required">*</span></label>
+        <input id="name" name="name" type="text" required/>
+        <fieldset>
+            <legend>In Stock</legend>
+            <label for="yes">Yes
+                <input id="yes" name="in stock" type="radio" value="yes"/>
+            </label>
+            <label for="no">No
+                <input id="no" name="in stock" type="radio" value="no"/>
+            </label>
+        </fieldset>
+        <label for="price">Price<span class="required"></span></label>
+        <input id="price" name="price" type="text" required/>
+        <fieldset>
+            <legend>New/Used</legend>
+            <label for="new">New
+                <input id="new" name="new/used" type="radio" value="new"/>
+            </label>
+            <label for="used">Used
+                <input id="used" name="new/used" type="radio" value="used"/>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Rarity</legend>
+            <label for="high">High
+                <input id="high" name="rarity" type="radio" value="high"/>
+            </label>
+            <label for="medium">Medium
+                <input id="medium" name="rarity" type="radio" value="medium"/>
+            </label>
+            <label for="low">Low
+                <input id="low" name="rarity" type="radio" value="low"/>
+            </label>
+        </fieldset>
+    </form>
 </body>
+
 </html>

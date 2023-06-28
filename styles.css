@@ -23,3 +23,7 @@ header h1 {
 .main {
     grid-area: m;
 }
+
+li img {
+    width: 200px;
+}

@@ -8,7 +8,6 @@ const sideDiv = document.createElement("div");
 const mainDiv = document.createElement("div");
 const input = document.createElement("input");
 
-
 body.appendChild(main);
 main.appendChild(div);
 sideDiv.classList.add("sidebar");
@@ -16,10 +15,24 @@ mainDiv.classList.add("main");
 div.appendChild(mainDiv);
 div.appendChild(sideDiv);
 
-mainDiv.append(form);
-form.append(input);
-input.type = "text";
-input.placeholder = "x";
+// mainDiv.append(form);
+// form.append(input);
+// input.type = "text";
+// input.placeholder = "x";
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    let name = event.target.name.value
+    let inStock = event.target.inStock.value
+    let price = event.target.price.value
+    let used = event.target.price.value
+    let rarity = event.target.rarity.value
+
+    generateGame(name, inStock, price, used, rarity)
+
+    form.reset();
+})
 
 function gameTemplate(name, inStock, price, used, rarity) {
   const li = document.createElement("li");
@@ -30,19 +43,16 @@ function gameTemplate(name, inStock, price, used, rarity) {
     strong.textContent = "In Stock: ";
     li.append(document.createElement("br"), strong, inStock);
   }
-
   if (price) {
     const strong = document.createElement("strong");
     strong.textContent = "Price: ";
     li.append(document.createElement("br"), strong, price);
   }
-
   if (used) {
     const strong = document.createElement("strong");
     strong.textContent = "New/Used: ";
     li.append(document.createElement("br"), strong, used);
   }
-
   if (rarity) {
     const strong = document.createElement("strong");
     strong.textContent = "Rarity: ";
@@ -67,16 +77,16 @@ function generateGame(name, inStock, price, used, rarity) {
   ul.append(li);
 }
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
+// form.addEventListener("submit", (event) => {
+//   event.preventDefault();
 
-  let name = event.target.name.value;
-  let inStock = event.target.inStock.value;
-  let price = event.target.price.value;
-  let used = event.target.used.value;
-  let rarity = event.target.rarity.value;
+//   let name = event.target.name.value;
+//   let inStock = event.target.inStock.value;
+//   let price = event.target.price.value;
+//   let used = event.target.used.value;
+//   let rarity = event.target.rarity.value;
 
-  generateGame(name, inStock, price, used, rarity);
+//   generateGame(name, inStock, price, used, rarity);
 
-  form.reset();
-});
+//   form.reset();
+// });
