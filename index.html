@@ -38,6 +38,8 @@
     </div>
     <h2>Add Game</h2>
     <form id="new-game">
+        <label for="image">Image URL</label>
+        <input id="image" name="image" type="url"/>
         <label for="name">Game<span class="required">*</span></label>
         <input id="name" name="name" type="text" required />
         <label for="price">Price<span class="required"></span></label>
@@ -45,31 +47,31 @@
         <fieldset>
             <legend>In Stock</legend>
             <label for="yes">Yes
-                <input id="yes" name="in stock" type="radio" value="yes" />
+                <input id="yes" name="in stock" type="radio" value="Yes" />
             </label>
             <label for="no">No
-                <input id="no" name="in stock" type="radio" value="no" />
+                <input id="no" name="in stock" type="radio" value="No" />
             </label>
         </fieldset>
         <fieldset>
             <legend>New/Used</legend>
             <label for="new">New
-                <input id="new" name="new/used" type="radio" value="new" />
+                <input id="new" name="new/used" type="radio" value="New" />
             </label>
             <label for="used">Used
-                <input id="used" name="new/used" type="radio" value="used" />
+                <input id="used" name="new/used" type="radio" value="Used" />
             </label>
         </fieldset>
         <fieldset>
             <legend>Rarity</legend>
             <label for="high">High
-                <input id="high" name="rarity" type="radio" value="high" />
+                <input id="high" name="rarity" type="radio" value="High" />
             </label>
             <label for="medium">Medium
-                <input id="medium" name="rarity" type="radio" value="medium" />
+                <input id="medium" name="rarity" type="radio" value="Medium" />
             </label>
             <label for="low">Low
-                <input id="low" name="rarity" type="radio" value="low" />
+                <input id="low" name="rarity" type="radio" value="Low" />
             </label>
         </fieldset>
         <button type="submit">Submit</button>
