@@ -21,11 +21,11 @@
                 <br>
                 Super Smash Bros. 64
                 <br>
-                <strong>In Stock: </strong>
-                Yes
-                <br>
                 <strong>Price: </strong>
                 $70
+                <br>
+                <strong>In Stock: </strong>
+                Yes
                 <br>
                 <strong>New/Used: </strong>
                 Used
@@ -36,41 +36,44 @@
             </li>
         </ul>
     </div>
+    <h2>Add Game</h2>
     <form id="new-game">
         <label for="name">Game<span class="required">*</span></label>
-        <input id="name" name="name" type="text" required/>
+        <input id="name" name="name" type="text" required />
+        <label for="price">Price<span class="required"></span></label>
+        <input id="price" name="price" type="text" required />
         <fieldset>
             <legend>In Stock</legend>
             <label for="yes">Yes
-                <input id="yes" name="in stock" type="radio" value="yes"/>
+                <input id="yes" name="in stock" type="radio" value="yes" />
             </label>
             <label for="no">No
-                <input id="no" name="in stock" type="radio" value="no"/>
+                <input id="no" name="in stock" type="radio" value="no" />
             </label>
         </fieldset>
-        <label for="price">Price<span class="required"></span></label>
-        <input id="price" name="price" type="text" required/>
         <fieldset>
             <legend>New/Used</legend>
             <label for="new">New
-                <input id="new" name="new/used" type="radio" value="new"/>
+                <input id="new" name="new/used" type="radio" value="new" />
             </label>
             <label for="used">Used
-                <input id="used" name="new/used" type="radio" value="used"/>
+                <input id="used" name="new/used" type="radio" value="used" />
             </label>
         </fieldset>
         <fieldset>
             <legend>Rarity</legend>
             <label for="high">High
-                <input id="high" name="rarity" type="radio" value="high"/>
+                <input id="high" name="rarity" type="radio" value="high" />
             </label>
             <label for="medium">Medium
-                <input id="medium" name="rarity" type="radio" value="medium"/>
+                <input id="medium" name="rarity" type="radio" value="medium" />
             </label>
             <label for="low">Low
-                <input id="low" name="rarity" type="radio" value="low"/>
+                <input id="low" name="rarity" type="radio" value="low" />
             </label>
         </fieldset>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
     </form>
 </body>
 

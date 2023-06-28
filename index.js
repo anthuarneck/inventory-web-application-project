@@ -24,29 +24,29 @@ form.addEventListener("submit", (event) => {
     event.preventDefault();
 
     let name = event.target.name.value
-    let inStock = event.target.inStock.value
     let price = event.target.price.value
+    let inStock = event.target.inStock.value
     let used = event.target.price.value
     let rarity = event.target.rarity.value
 
-    generateGame(name, inStock, price, used, rarity)
+    generateGame(name, price, inStock, used, rarity)
 
     form.reset();
 })
 
-function gameTemplate(name, inStock, price, used, rarity) {
+function gameTemplate(name, price, inStock, used, rarity) {
   const li = document.createElement("li");
   li.textContent += name;
 
-  if (inStock) {
-    const strong = document.createElement("strong");
-    strong.textContent = "In Stock: ";
-    li.append(document.createElement("br"), strong, inStock);
-  }
   if (price) {
     const strong = document.createElement("strong");
     strong.textContent = "Price: ";
     li.append(document.createElement("br"), strong, price);
+  }
+  if (inStock) {
+    const strong = document.createElement("strong");
+    strong.textContent = "In Stock: ";
+    li.append(document.createElement("br"), strong, inStock);
   }
   if (used) {
     const strong = document.createElement("strong");
@@ -70,23 +70,10 @@ function gameTemplate(name, inStock, price, used, rarity) {
   return li;
 }
 
-function generateGame(name, inStock, price, used, rarity) {
-  const li = gameTemplate(name, inStock, price, used, rarity);
+function generateGame(name, price, inStock, used, rarity) {
+  const li = gameTemplate(name, price, inStock, used, rarity);
 
   const ul = document.querySelector("ul");
   ul.append(li);
 }
 
-// form.addEventListener("submit", (event) => {
-//   event.preventDefault();
-
-//   let name = event.target.name.value;
-//   let inStock = event.target.inStock.value;
-//   let price = event.target.price.value;
-//   let used = event.target.used.value;
-//   let rarity = event.target.rarity.value;
-
-//   generateGame(name, inStock, price, used, rarity);
-
-//   form.reset();
-// });
