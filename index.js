@@ -26,16 +26,16 @@ form.addEventListener("submit", (event) => {
   let image = event.target.image.value;
   let name = event.target.name.value;
   let price = `$${event.target.price.value}`;
-  let inStock = event.target.inStock;
+  let stock = event.target.stock.value;
   let used = event.target.used.value;
   let rarity = event.target.rarity.value;
 
-  generateGame(image, name, price, inStock, used, rarity);
+  generateGame(image, name, price, stock, used, rarity);
 
   form.reset();
 });
 
-function gameTemplate(image, name, price, inStock, used, rarity) {
+function gameTemplate(image, name, price, stock, used, rarity) {
   const li = document.createElement("li");
 
   if (image) {
@@ -49,10 +49,10 @@ function gameTemplate(image, name, price, inStock, used, rarity) {
     strong.textContent = "Price: ";
     li.append(document.createElement("br"), strong, price);
   }
-  if (inStock) {
+  if (stock) {
     const strong = document.createElement("strong");
     strong.textContent = "In Stock: ";
-    li.append(document.createElement("br"), strong, inStock);
+    li.append(document.createElement("br"), strong, stock);
   }
   if (used) {
     const strong = document.createElement("strong");
@@ -66,7 +66,7 @@ function gameTemplate(image, name, price, inStock, used, rarity) {
   }
   const remove = document.createElement("button");
   remove.innerText = "Remove Game";
-  li.append(remove);
+  li.append(document.createElement("br"), remove);
 
   remove.addEventListener("click", (event) => {
     li.remove();
@@ -75,8 +75,8 @@ function gameTemplate(image, name, price, inStock, used, rarity) {
   return li;
 }
 
-function generateGame(image, name, price, inStock, used, rarity) {
-  const li = gameTemplate(image, name, price, inStock, used, rarity);
+function generateGame(image, name, price, stock, used, rarity) {
+  const li = gameTemplate(image, name, price, stock, used, rarity);
 
   const ul = document.querySelector("ul");
   ul.append(document.createElement("br"), li);

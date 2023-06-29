@@ -45,3 +45,10 @@ form textarea {
     width: 50%
 }
 
+button {
+    border: none;
+    border-radius: 5px;
+    background:rgb(23, 204, 96);
+    cursor:pointer;
+    margin: 15px;
+}
