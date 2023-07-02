@@ -1,18 +1,6 @@
 const body = document.querySelector("body");
 const div = document.querySelector("div");
 const form = document.querySelector("form");
-const main = document.createElement("main");
-const sideDiv = document.createElement("div");
-const mainDiv = document.createElement("div");
-
-body.appendChild(main);
-main.appendChild(div);
-sideDiv.classList.add("sidebar");
-mainDiv.classList.add("main");
-div.appendChild(mainDiv);
-// div.appendChild(sideDiv);
-mainDiv.appendChild(form)
-
 
 let errorMessage = document.createElement("p");
 errorMessage.style.color = "red";

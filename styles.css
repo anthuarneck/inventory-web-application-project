@@ -21,7 +21,7 @@ body {
     grid-template-columns: repeat(1fr, 4);
     grid-template-areas:
         "s s m m";
-    grid-auto-rows: minmax(100px, auto);
+    grid-template-rows: 200px
 }
 
 .sidebar {
@@ -76,7 +76,7 @@ form textarea {
     box-sizing: border-box;
     display: flex;
     margin: 5px 0;
-    width: 45%;
+    width: 50%;
 }
 
 button {
@@ -89,5 +89,28 @@ button {
 }
 
 @media (max-width: 660px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "m";
+        grid-template-rows: 200px 200px 35px
+    }
 
+    #new-game {
+        padding-left: 35px
+    }
+
+    form textarea,
+    form input,
+    form fieldset {
+        box-sizing: border-box;
+        display: flex;
+        margin: 5px 0;
+        width: 50%;
+    }
+
+    #inventory {
+        grid-area: m;
+        grid-row: 4;
+    }
 }
