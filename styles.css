@@ -93,7 +93,7 @@ button {
         grid-template-columns: 1fr;
         grid-template-areas:
             "m";
-        grid-template-rows: 200px 200px 35px
+        grid-template-rows: 200px 200px 50px
     }
 
     #new-game {
