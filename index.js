@@ -57,19 +57,18 @@ function gameTemplate(name, price, stock, quality, rarity) {
   remove.innerText = "Remove";
   const update = document.createElement("button");
   update.innerText = "Update";
+
   li.append(document.createElement("br"), remove, update);
 
   remove.addEventListener("click", (event) => {
     li.remove();
   });
+
   update.addEventListener("click", (event) => {
     if (stock == "Yes") {
       stock = "No";
     }
-    console.log(target.stock.value);
-    console.log(li);
   });
-
   return li;
 }
 
