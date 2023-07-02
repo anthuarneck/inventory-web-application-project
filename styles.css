@@ -98,6 +98,10 @@ button {
         text-align: center;
     }
 
+    h2#inventory {
+        padding-left: 0px
+    }
+
     .container {
         grid-template-columns: 1fr;
         grid-template-areas:
@@ -108,7 +112,7 @@ button {
     }
 
     #new-game {
-        padding-left: 35px
+        padding-left: 0px
     }
 
     form textarea,
