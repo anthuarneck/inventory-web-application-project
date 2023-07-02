@@ -94,11 +94,17 @@ button {
 }
 
 @media (max-width: 660px) {
+    header h1 {
+        text-align: center;
+    }
+
     .container {
         grid-template-columns: 1fr;
         grid-template-areas:
             "m";
-        grid-template-rows: 200px 200px 50px
+        grid-template-rows: 200px 200px 50px;
+        ;
+        justify-items: center;
     }
 
     #new-game {
@@ -110,8 +116,8 @@ button {
     form fieldset {
         box-sizing: border-box;
         display: flex;
-        margin: 5px 0;
-        width: 50%;
+        margin: 5px;
+        width: 75%;
     }
 
     #inventory {
