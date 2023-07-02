@@ -64,10 +64,10 @@ function gameTemplate(name, price, stock, quality, rarity) {
   });
   update.addEventListener("click", (event) => {
     if (stock == "Yes") {
-      stock = "No"
+      stock = "No";
     }
-    console.log(stock);
-    console.log(li)
+    console.log(target.stock.value);
+    console.log(li);
   });
 
   return li;
