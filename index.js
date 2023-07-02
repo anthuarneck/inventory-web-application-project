@@ -63,8 +63,11 @@ function gameTemplate(name, price, stock, quality, rarity) {
     li.remove();
   });
   update.addEventListener("click", (event) => {
-    let toggleStock = document.querySelector("#yes input");
-    console.log(toggleStock.value);
+    if (stock == "Yes") {
+      stock = "No"
+    }
+    console.log(stock);
+    console.log(li)
   });
 
   return li;
