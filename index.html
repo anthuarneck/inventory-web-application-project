@@ -12,11 +12,11 @@
 
 <body>
     <header>
-        <h1>Vintage Game Inventory🕹️</h1>
+        <h1>Vintage Game Inventory</h1>
     </header>
     <div class="container">
-        <h2>Inventory🕹️</h2>
-        <ul>
+        <h2 id="inventory">Inventory</h2>
+        <ul id="inventory">
             <li><img src="https://upload.wikimedia.org/wikipedia/en/4/42/Supersmashbox.jpg" />
                 <br>
                 Super Smash Bros. 64
@@ -35,8 +35,7 @@
                 <br>
             </li>
         </ul>
-    </div>
-    <h2>Add Game</h2>
+    <h2 id="new-game">Add Game</h2>
     <form id="new-game">
         <label for="name">Game Title<span class="required">*</span></label>
         <input id="name" name="name" type="text" />
@@ -65,7 +64,7 @@
             <label for="high">High
                 <input id="high" name="rarity" type="radio" value="High" />
             </label>
-            <label for="medium">Medium
+            <label for="medium">Med
                 <input id="medium" name="rarity" type="radio" value="Medium" />
             </label>
             <label for="low">Low
@@ -75,6 +74,7 @@
         <button type="submit">Submit</button>
         <button type="reset">Reset</button>
     </form>
+</div>
 </body>
 
 </html>

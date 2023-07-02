@@ -1,21 +1,18 @@
 const body = document.querySelector("body");
 const div = document.querySelector("div");
 const form = document.querySelector("form");
-const ul = document.querySelector("ul");
-const li = document.querySelector("li");
 const main = document.createElement("main");
 const sideDiv = document.createElement("div");
 const mainDiv = document.createElement("div");
-const input = document.createElement("input");
-const strong = document.querySelector("strong");
-const label = document.querySelector("label");
 
 body.appendChild(main);
 main.appendChild(div);
 sideDiv.classList.add("sidebar");
 mainDiv.classList.add("main");
 div.appendChild(mainDiv);
-div.appendChild(sideDiv);
+// div.appendChild(sideDiv);
+mainDiv.appendChild(form)
+
 
 let errorMessage = document.createElement("p");
 errorMessage.style.color = "red";
@@ -44,8 +41,6 @@ form.addEventListener("submit", (event) => {
   form.reset();
 });
 
-
-
 function gameTemplate(name, price, stock, quality, rarity) {
   const li = document.createElement("li");
   li.textContent += name;
@@ -71,18 +66,18 @@ function gameTemplate(name, price, stock, quality, rarity) {
     li.append(document.createElement("br"), strong, rarity);
   }
   const remove = document.createElement("button");
-  remove.innerText = "Remove Game";
+  remove.innerText = "Remove";
   const update = document.createElement("button");
-  update.innerText = "Update Stock";
+  update.innerText = "Update";
   li.append(document.createElement("br"), remove, update);
 
   remove.addEventListener("click", (event) => {
     li.remove();
-  })
+  });
   update.addEventListener("click", (event) => {
-    console.log(stock.innerText)
-  })
-;
+    let toggleStock = document.querySelector("#yes input");
+    console.log(toggleStock.value);
+  });
 
   return li;
 }
@@ -93,9 +88,3 @@ function generateGame(name, price, stock, quality, rarity) {
   const ul = document.querySelector("ul");
   ul.append(document.createElement("br"), li);
 }
-
-let currentStock = "Yes";
-
-li.addEventListener("click", (event) => {
-  console.log(li.innerText);
-});

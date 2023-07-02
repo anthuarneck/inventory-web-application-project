@@ -1,23 +1,39 @@
 header {
-    background: linear-gradient(grey, white);
-
+    background: rgb(38, 41, 40);
+    color: whitesmoke;
 }
 
 header h1 {
-    margin: 0 0 50px;
+    margin: 0;
     padding: 25px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+html,
+body {
+    color: rgb(38, 41, 40);
+    margin: 0;
+    padding: 0;
 }
 
 .container {
     display: grid;
     grid-template-columns: repeat(1fr, 4);
-    grid-template-areas: 
-    "s s m m";
+    grid-template-areas:
+        "s s m m";
+    grid-auto-rows: minmax(100px, auto);
 }
 
 .sidebar {
     grid-area: s;
+}
+
+#inventory {
+    grid-area: s;
+}
+
+#new-game {
+    grid-area: m;
 }
 
 .main {
@@ -26,30 +42,48 @@ header h1 {
 
 ul {
     list-style: none;
+    padding-top: 75px;
 }
 
+li {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
 li img {
-    width: 200px;
+    width: 175px;
+}
+
+h2#inventory {
+    padding-left: 35px
 }
 
 h2 {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(38, 41, 40);
 }
 
+form {
+    padding-top: 75px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+form fieldset,
 form input,
 form label,
 form textarea {
     box-sizing: border-box;
-    display:flex;
+    display: flex;
     margin: 5px 0;
-    width: 50%
+    width: 45%;
 }
 
 button {
     border: none;
     border-radius: 5px;
-    background:rgb(23, 204, 96);
-    cursor:pointer;
-    margin: 15px;
+    background: rgb(11, 137, 61);
+    cursor: pointer;
+    margin: 5px;
+    margin-left: 0px;
 }
