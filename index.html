@@ -38,14 +38,12 @@
     </div>
     <h2>Add Game</h2>
     <form id="new-game">
-        <label for="image">Image URL</label>
-        <input id="image" name="image" type="url"/>
-        <label for="name">Game<span class="required">*</span></label>
-        <input id="name" name="name" type="text" required />
-        <label for="price">Price<span class="required"></span></label>
-        <input id="price" name="price" type="text" required />
+        <label for="name">Game Title<span class="required">*</span></label>
+        <input id="name" name="name" type="text" />
+        <label for="price">Price<span class="required">*</span></label>
+        <input id="price" name="price" type="number" />
         <fieldset>
-            <legend>In Stock</legend>
+            <legend>In Stock<span class="required">*</span></legend>
             <label for="yes">Yes
                 <input id="yes" name="stock" type="radio" value="Yes" />
             </label>
