@@ -7,8 +7,8 @@ const main = document.createElement("main");
 const sideDiv = document.createElement("div");
 const mainDiv = document.createElement("div");
 const input = document.createElement("input");
-const strong = document.querySelector("strong")
-const label = document.querySelector("label")
+const strong = document.querySelector("strong");
+const label = document.querySelector("label");
 
 body.appendChild(main);
 main.appendChild(div);
@@ -19,7 +19,7 @@ div.appendChild(sideDiv);
 
 let errorMessage = document.createElement("p");
 errorMessage.style.color = "red";
-form.append(errorMessage)
+form.append(errorMessage);
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -27,9 +27,9 @@ form.addEventListener("submit", (event) => {
   let name = event.target.name.value;
   let price = event.target.price.value;
   let stock = event.target.stock.value;
-  let used = event.target.used.value;
+  let quality = event.target.quality.value;
   let rarity = event.target.rarity.value;
-  
+
   if (!name) {
     errorMessage.textContent = "Error: Game must contain a title";
   } else if (!price) {
@@ -38,13 +38,15 @@ form.addEventListener("submit", (event) => {
     errorMessage.textContent = "Error: Game must contain stock data";
   } else {
     errorMessage.textContent = "";
-    generateGame(name, price, stock, used, rarity);
+    generateGame(name, price, stock, quality, rarity);
   }
 
-form.reset();
+  form.reset();
 });
 
-function gameTemplate(name, price, stock, used, rarity) {
+
+
+function gameTemplate(name, price, stock, quality, rarity) {
   const li = document.createElement("li");
   li.textContent += name;
 
@@ -58,10 +60,10 @@ function gameTemplate(name, price, stock, used, rarity) {
     strong.textContent = "In Stock: ";
     li.append(document.createElement("br"), strong, stock);
   }
-  if (used) {
+  if (quality) {
     const strong = document.createElement("strong");
     strong.textContent = "New/Used: ";
-    li.append(document.createElement("br"), strong, used);
+    li.append(document.createElement("br"), strong, quality);
   }
   if (rarity) {
     const strong = document.createElement("strong");
@@ -70,31 +72,30 @@ function gameTemplate(name, price, stock, used, rarity) {
   }
   const remove = document.createElement("button");
   remove.innerText = "Remove Game";
-  li.append(document.createElement("br"), remove);
+  const update = document.createElement("button");
+  update.innerText = "Update Stock";
+  li.append(document.createElement("br"), remove, update);
 
   remove.addEventListener("click", (event) => {
     li.remove();
-
-  const update = document.createElement("button");
-  update.innerText = "Update Stock";
-
-
-  });
+  })
+  update.addEventListener("click", (event) => {
+    console.log(stock.innerText)
+  })
+;
 
   return li;
 }
 
-function generateGame(name, price, stock, used, rarity) {
-  const li = gameTemplate(name, price, stock, used, rarity);
+function generateGame(name, price, stock, quality, rarity) {
+  const li = gameTemplate(name, price, stock, quality, rarity);
 
   const ul = document.querySelector("ul");
   ul.append(document.createElement("br"), li);
 }
 
-let currentStock = "Yes"
+let currentStock = "Yes";
 
-    li.addEventListener("click", (event) => {
-          console.log(li.innerText)
-        
-    })
-
+li.addEventListener("click", (event) => {
+  console.log(li.innerText);
+});
