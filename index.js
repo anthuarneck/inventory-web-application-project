@@ -76,5 +76,5 @@ function generateGame(name, price, stock, quality, rarity) {
   const li = gameTemplate(name, price, stock, quality, rarity);
 
   const ul = document.querySelector("ul");
-  ul.append(document.createElement("br"), li);
+  ul.append(li);
 }
