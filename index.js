@@ -64,8 +64,14 @@ function gameTemplate(name, price, stock, quality, rarity) {
     li.remove();
   });
 
+  let inStock = true;
+
   update.addEventListener("click", (event) => {
-    if (stock == "Yes") {
+    console.log(stock);
+    inStock = !inStock;
+    if (inStock) {
+      stock = "Yes";
+    } else {
       stock = "No";
     }
   });
